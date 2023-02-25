@@ -50,16 +50,16 @@
     font-size: 2rem;
 }
 
-.field{
+.nav-field{
     margin: 0 1em;
 }
 
-.field>a{
+.nav-field>a{
     text-decoration: none;
     color: black;
 }
 
-.field>a:hover{
+.nav-field>a:hover{
     color: white;
     transition: 150ms;
 }
