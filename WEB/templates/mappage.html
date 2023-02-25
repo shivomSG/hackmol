@@ -1,14 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' type='text/class' media='screen' href='mappage.css'>
-    <title>HMS</title>
+  <title>Bing Maps Example with Multiple Pushpins and Infoboxes</title>
+  <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=loadMapScenario' async defer></script>
+  <script type='text/javascript'>
+    function loadMapScenario() {
+      var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+        credentials: 'AnYvwgAd9DpkZXHoyzrb1GK6sn_4gELsmNISBgkPbQRIznKrHxGpZ9hMZntFppm4',
+        center: new Microsoft.Maps.Location(31.331708, 75.571589),
+        zoom: 16
+      });
+      
+      var pushpins = [
+        {
+          location: new Microsoft.Maps.Location(31.330140, 75.570002),
+          title: 'Jaswant Hospital',
+          description: '230m'
+        },
+        {
+          location: new Microsoft.Maps.Location(31.335351, 75.571573),
+          title: 'City Hospital',
+          description: '405m'
+        },
+        {
+          location: new Microsoft.Maps.Location(31.334413, 75.564847),
+          title: 'Tagore Hospital',
+          description: '707m'
+        }
+      ];
+      
+      for (var i = 0; i < pushpins.length; i++) {
+        var pushpin = new Microsoft.Maps.Pushpin(pushpins[i].location, {title: pushpins[i].title});
+        var infobox = new Microsoft.Maps.Infobox(pushpins[i].location, {
+          title: pushpins[i].title,
+          description: pushpins[i].description
+        });
+        infobox.setMap(map);
+        Microsoft.Maps.Events.addHandler(pushpin, 'click', function (e) {
+          infobox.setOptions({
+            visible: true
+          });
+        });
+        map.entities.push(pushpin);
+      }
+    }
+  </script>
 </head>
-<body>
-    
-    <script src='maps.js'></script>
+<body onload='loadMapScenario();'>
+  <div id='myMap' style='width: 800px; height: 600px;'></div>
 </body>
 </html>
