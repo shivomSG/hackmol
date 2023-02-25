@@ -1,10 +1,12 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login as lg
+from .models import patient
+
 # Create your views here.
 
-def home(request):
-    return render(request, 'home.html')
+def index(request):
+    return render(request, 'index.html')
 def signup(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -29,12 +31,21 @@ def login(request):
         pass1 = request.POST.get('pass')
         user = authenticate(request, username=username, password=pass1)
         if user is not None:
-            login(request, user)
-            return redirect('home')
+            lg(request, user)
+            return redirect('index')
         else:
-            return HttpResponse("Your username or password is incorrect!!")
-
-
-
+            return render(request,'login.html')
 
     return render(request,'login.html')
+
+def appointments(request):
+        if request.method == 'POST':
+          name = request.POST['name']
+          age = request.POST['age']
+          gender = request.POST['gender']
+          doctor = request.POST['doctor']
+          date = request.POST['time']
+          pat_data = patient(name=name, age=age,  gender=gender, doctor=doctor, date=date)
+          pat_data.save()
+
+        return render(request,'appointments.html')
