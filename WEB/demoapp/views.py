@@ -34,7 +34,9 @@ def login(request):
         else:
             return render(request,'login.html')
 
-
-
-
     return render(request,'login.html')
+
+def appointments(request):
+    return render(request, 'appointments.html')
+def apt_data(request):
+    return HttpResponse("Hello World")
