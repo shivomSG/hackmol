@@ -145,6 +145,7 @@ button{
         <div class="shape"></div>
     </div>
     <form method="post">
+        {% csrf_token %}
         <h3>Login Here</h3>
         {% csrf_token %}
         <label for="username">Username</label>

@@ -4,18 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
     <title>Document</title>
 </head>
 <body>
-    <form action="{% url 'apt_data' %}">
-
+<<<<<<< HEAD
+    <form action="" method="post">
+        {% csrf_token %}
         <div class="navbar">
-            <ul>
+            <ul class="list">
                 <li>home</li>
                 <li>blah</li>
                 <li>blah</li>
             </ul>
         </div>
+=======
+
+    <div class="navbar">
+        <ul class="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+            
+    <form action="" class="form">
+>>>>>>> cd59e392d0463291f3e634dab74b366a300047d7
+
+        <label for="name">Name</label>
+        <input type="text" placeholder="name" name="name" id="name" >
+
+
+        <br><br>
+
+        <label for="age">Age</label>
+        <input type="number" placeholder="age" name="age" id="age" >
+
+         <br><br>
+
+        <label for="gender">Gender(M\F\T)</label>
+            <select  placeholder="gender" name="gender" id="gender">
+                <option value="">Male</option>
+                <option value="">Female</option>
+                <option value="">Prefer not to say</option>
+            </select>
+
+            <br><br>
+
+        <label for="apt">Book an appointment with Dr.</label>
+        <select placeholder="doctor" name="doctor" id="doctor">
+                <option value="">asd</option>
+                <option value="">adg</option>
+                <option value="">fadsf</option>
+                <option value="">afas</option>
+            </select>
+
+            <br><br>
+
+            <label for="time">Schedule date of appointment:</label>
+        <input type="number" placeholder="time" name="time" id="time" >
+<BR>
+        <BR>
+        <button type="submit">sUBMIT</button>
+
+    </form>
+<<<<<<< HEAD
+
+=======
+    </div>
+
+    <!-- <form action="" class="form">
 
         Name:<input type="text" class="pt_name">
 
@@ -47,10 +107,7 @@
             Schedule date of appointment:
             <input type="datetime-local" class="date">
 
-            <br><br>
-
-            <button class="btn">submit</button>
-
-    </form>
+    </form> -->
+>>>>>>> cd59e392d0463291f3e634dab74b366a300047d7
 </body>
 </html>
