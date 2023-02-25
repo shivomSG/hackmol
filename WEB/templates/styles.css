@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -13,9 +13,61 @@
     background-size: cover;
 }
 
+.navbar{
+    display: flex;
+    background-color: aqua;
+} */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Be+Vietnam+Pro:wght@100&family=Poppins:wght@700&family=Tilt+Warp&display=swap');
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    perspective: 10px;
+    background-image: url("beds.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 
 .navbar{
     display: flex;
-    background-color: aqua;
+    justify-content: end;
+    background-color: rgba(66, 62, 62, 0.5);
+    width: 100%;
+    padding: 1em;
+
+    font-size: 2rem;
+}
+
+.field{
+    margin: 0 1em;
+}
+
+.field>a{
+    text-decoration: none;
+    color: black;
+}
+
+.field>a:hover{
+    color: white;
+    transition: 150ms;
+}
+
+.midbox{
+    color: white;
+    font-size: 2rem;
+    transform: translateX(50%) translateY(35%rem);
+    font-family: 'Tilt Warp', sans-serif;
+
+    margin: 0 auto;
 }
