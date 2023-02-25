@@ -36,13 +36,16 @@
           description: pushpins[i].description
         });
         infobox.setMap(map);
-        Microsoft.Maps.Events.addHandler(pushpin, 'click', function (e) {
-          infobox.setOptions({
-            visible: true
-          });
-        });
-        map.entities.push(pushpin);
-      }
+        // Add a click event listener to the pushpin
+  pushpin.metadata = {
+    url: 'info' + (i+1) + '.html' 
+  };
+  Microsoft.Maps.Events.addHandler(pushpin, 'click', function (e) {
+    window.location.href = e.target.metadata.url;
+  });
+  
+  map.entities.push(pushpin);
+}
     }
   </script>
 </head>
