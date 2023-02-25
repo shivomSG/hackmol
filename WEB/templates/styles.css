@@ -32,7 +32,7 @@
     overflow-x: hidden; 
     overflow-y: auto; 
     perspective: 10px;
-    background-image: url("beds.jpg");
+    background-image: url("../demoapp/static/images/beds.jpg");
     background-size: cover;
     display: flex;
     flex-direction: column;
