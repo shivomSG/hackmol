@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login
 # Create your views here.
 
-def home(request):
-    return render(request, 'home.html')
+def index(request):
+    return render(request, 'index.jsp')
 def signup(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -19,22 +19,22 @@ def signup(request):
         else:
             my_user = User.objects.create_user(username, email, password1)
             my_user.save()
-            return redirect('index')
+            return redirect('login')
 
     return render(request,'signup.html')
 
-def index(request):
+def login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         pass1 = request.POST.get('pass')
         user = authenticate(request, username=username, password=pass1)
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return redirect('index')
         else:
-            return render(request,'index.jsp')
+            return render(request,'login.html')
 
 
 
 
-    return render(request,'index.jsp')
+    return render(request,'login.html')
