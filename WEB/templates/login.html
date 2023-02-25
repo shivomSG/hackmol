@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Design by foolishdeveloper.com -->
     <title>Login Page</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -9,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <!--Stylesheet-->
     <style media="screen">
-        {% load static %}
       *,
 *:before,
 *:after{
@@ -17,50 +15,12 @@
     margin: 0;
     box-sizing: border-box;
 }
-{% load static %}
-.wrapper{
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 10px;
-    background-image: url("static/images/beds.jpg");
+body{
+
+    background-image: url("/WEB/demoapp/static/images/sthetescope.jpg");
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-/* .background{
-    width: 430px;
-    height: 520px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
-}
-.background .shape{
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-}
-.shape:first-child{
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
-    left: -80px;
-    top: -80px;
-}
-.shape:last-child{
-    background: linear-gradient(
-        to right,
-        #ff512f,
-        #f09819
-    );
-    right: -30px;
-    bottom: -80px;
-} */
 
 form{
     height: 520px;
@@ -78,7 +38,6 @@ form{
 }
 form *{
     font-family: 'Poppins',sans-serif;
-    /* color: #ffffff; */
     letter-spacing: 0.5px;
     outline: none;
     border: none;
@@ -166,11 +125,6 @@ button{
         <input type="password" placeholder="Password" id="password" name="pass">
 
         <button type="submit">Log In</button>
-        <!-- <input type="button" value=""> -->
-        <!-- <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Google</div>
-          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
-        </div> -->
         <a href="{% url 'signup' %}" >Create a account</a>
     </form>
 </body>
