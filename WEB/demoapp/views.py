@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login
 # Create your views here.
 
-def index(request):
-    return render(request, 'index.jsp')
+def home(request):
+    return render(request, 'home.html')
 def signup(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -19,11 +19,11 @@ def signup(request):
         else:
             my_user = User.objects.create_user(username, email, password1)
             my_user.save()
-            return redirect('login')
+            return redirect('index')
 
     return render(request,'signup.html')
 
-def login(request):
+def index(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         pass1 = request.POST.get('pass')
@@ -32,7 +32,7 @@ def login(request):
             login(request, user)
             return redirect('home')
         else:
-            return HttpResponse("Your username or password is incorrect!!")
+            return render(request,'index.jsp')
 
 
 

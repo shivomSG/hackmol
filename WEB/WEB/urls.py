@@ -21,7 +21,7 @@ from demoapp import models
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('demoapp.urls')),
-    path('', views.index, name='home'),
+    path('', views.home, name='home'),
     path('signup/', views.signup, name='signup'),
     path('login/', views.login, name='login'),
     ]
