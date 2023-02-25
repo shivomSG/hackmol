@@ -18,9 +18,7 @@
     <br>
     <br>
     <br>hi this is our website</h1></marquee></center>
-<center><a href="{% url 'login' %}">login</a> </center>
-<br>
-<center><a href="{% url 'signup' %}">signup</a></center><br>
+
 <center><a href="{% url 'appointments' %}">Appointment</a></center>
 </body>
 </html>

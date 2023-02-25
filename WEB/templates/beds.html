@@ -1,0 +1,114 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Formicon-Flat Forms Pack</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="icons/styles.css">
+		<link rel="stylesheet" href="css/bootstrap-custom.css">
+		<link rel="stylesheet" href="css/registration-form.css">
+
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body>
+		<!-- Register Form -->
+		<div class="form-wrapper"> <!-- Form-wrapper only for positioning -->
+			<form action="#non" method="post" class="fcorn-register container">
+				<p class="register-info">Note: All fields are required.</p>
+				<div class="row">
+					<p class="col-md-6"><input type="text" placeholder="First Name" required></p>
+					<p class="col-md-6"><input type="text" placeholder="Last Name" required></p>
+				</div>
+				<p><input type="email" placeholder="Email Address" required>
+				   <span class="extern-type">We'll keep this private.</span>
+				</p>
+				<p><input type="password" placeholder="Password" required>
+					<span class="extern-type">Atleast 8 characters long.</span>
+				</p>
+				<p><input type="password" placeholder="Verify Password" required></p>
+				<div class="row">
+					<p class="col-md-4"><input type="text" placeholder="age" required></p>
+
+
+          <p class="col-md-12"><input type="text" placeholder="Membership code"><span class="extern-type">Enter your membership code, if you do not have one, leave it blank.</span></p>
+				</div>
+				<div class="row">
+					<p class="col-md-6 city-wrap">
+						<select>
+							<option value="0" selected disabled>City</option>
+							<option value="1">Andhra pradesh</option>
+                            <option value="2">Tamil nadu</option>
+                            <option value="3">Rajasthan</option>
+                            <option value="4">Uttar pradesh</option>
+                            <option value="5">Bihar</option>
+                            <option value="6">Gujrat</option>
+                            <option value="7">Karnataka</option>
+                            <option value="8">Arunachal pradesh</option>
+                            <option value="9">Haryana</option>
+                            <option value="10">Nagaland</option>
+                            <option value="11">Odisha</option>
+                            <option value="12">West Bengal</option>
+                            <option value="13">Sikkim</option>
+                            <option value="14">Kerala</option>
+                            <option value="15">Himachal Pradesh</option>
+                            <option value="16">Jharkhand</option>
+                            <option value="17">Mizoram</option>
+                            <option value="18">Goa</option>
+                            <option value="19">Meghalaya</option>
+                            <option value="20">Telangana</option>
+                            <option value="21">Maharastra</option>
+                            <option value="22">Madhya Pradesh</option>
+                            <option value="23">Punjab</option>
+                            <option value="24">Assam</option>
+                            <option value="25">Jammu and Kashmir</option>
+                            <option value="26">Manipur</option>
+                            <option value="27">Tripura</option>
+                            <option value="28">Chhattisgarh"></option>
+                            <option value="29">Gujrat</option>
+						</select>
+					</p>
+					<p class="col-md-6 country-wrap">
+						<!-- Add more country name -->
+						<select>
+							<option value="0" selected disabled>Country</option>
+							<option value="1">India Only</option>
+							<option value="2">Outside India</option>
+						</select>
+					</p>
+          <div>
+            <p class="col-xs-12"><form action="upload.php" method="post" enctype="multipart/form-data">
+            Upload your personal photo:
+              <input type="file" name="fileToUpload" id="fileToUpload">
+              <input type="submit" value="Upload Image" name="submit" required>
+           </p>
+				</div>
+          <br/>
+				<p class="register-toggle">
+					<label for="register-agree" class="toggle-label" data-on="YES" data-off="NO">
+						<input type="checkbox" id="register-agree" class="toggle-input">
+						<span class="toggle-handle"></span>
+					</label>
+					<span class="info">Do you agree to the <a href="#">terms and conditions?</a></span>
+				</p>
+				<p class="register-submit"><input type="submit" value="Register Now"></p>
+			</form>
+    </div>
+
+
+
+
+
+
+		<!-- This is a placeholder fallback for IE9 browser -->
+		<!-- For IE9 and below - placeholder fallback-->
+		<!--[if lt IE 10]>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<script src="jquery.placeholder.min.js"></script>
+			<script type="text/javascript">
+				$('input, textarea').placeholder();
+			</script>
+		<![endif]-->
+	</body>
+</html>
+
+
