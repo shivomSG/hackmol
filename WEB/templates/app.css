@@ -4,7 +4,94 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url("./images/images/hoapital.jpg");
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: white;
+    transition: 250ms ease-in;
+}
+
+.navbar{
+    background-color: rgba(200, 200, 200, 0.5);
+    font-family: sans-serif;
+}
+
 .list{
     display: flex;
     list-style: none;
+    justify-content: space-evenly;
+}
+
+.list>li{
+    padding: 0.2em;
+    font-size: 2em;
+}
+
+.conatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    /* background-image: url("./images/images/hoapital.jpg");
+    background-size: cover; */
+
+    /* height: 100vh; */
+    margin:0 3rem;
+    /* background: linear-gradient(rgb(54, 54, 168), rgb(2, 2, 53)); */
+    color: white;
+
+    padding: 3em;
+    font-size: 2rem;
+
+    filter: blur(50%);
+}
+
+.pt_name{
+    background-color: rgba(200, 200, 200, 0.3);
+    border: none;
+    padding: 0.5em;
+    border-radius: 10px;
+    margin: 0.1em 1em;
+
+    font-size: 0.75em;
+}
+
+.pt_age{
+    background-color: rgba(200, 200, 200, 0.3);
+    border: none;
+    padding: 0.5em;
+    border-radius: 10px;
+    margin: 0.1em 1em;
+
+    font-size: 0.75em;
+}
+
+.pt_gender{
+    background-color: rgba(200, 200, 200, 0.3);
+    border: none;
+    padding: 0.5em;
+    border-radius: 10px;
+    margin: 0.1em 1em;
+
+    font-size: 0.75em;
+}
+
+.date{
+    background-color: rgba(200, 200, 200, 0.3);
+    border: none;
+    padding: 0.5em;
+    border-radius: 10px;
+    margin: 0.1em 1em;
+
+    font-size: 0.75em;
 }
