@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login as lg
+from demoapp.patients_data import PatientForm
 # Create your views here.
 
 def index(request):
@@ -38,5 +39,17 @@ def login(request):
 
 def appointments(request):
     return render(request, 'appointments.html')
-def apt_data(request):
-    return HttpResponse("Hello World")
+def appoint(request):
+    pt_form=PatientForm()
+    context={
+        'form':pt_form
+    }
+    return render (request, 'appoint.html', context)
+    # { if request.method=='POST':
+    #     pt_name=request.POST['pt_name']
+    #     pt_age=request.POST['pt_age']
+    #     pt_gender=request.POST['pt_gender']
+    #     doctor=request.POST['doctor']
+    #     date=request.POST['date']
+    #     print(pt_name,pt_age,pt_gender,doctor,date)
+    # return HttpResponse("Hello World")}

@@ -21,6 +21,6 @@
 <center><a href="{% url 'login' %}">login</a> </center>
 <br>
 <center><a href="{% url 'signup' %}">signup</a></center><br>
-<center><a href="{% url 'appointments' %}">Appointment</a></center>
+<center><a href="{% url 'appoint' %}">Appointment</a></center>
 </body>
 </html>
