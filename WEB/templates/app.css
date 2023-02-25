@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url("./images/images/hoapital.jpg");
+    background-image: url("./images/hoapital.jpg");
     background-size: cover;
 }
 
@@ -43,12 +43,8 @@ a:hover{
 }
 
 .form{
-    /* background-image: url("./images/images/hoapital.jpg");
-    background-size: cover; */
 
-    /* height: 100vh; */
     margin:0 3rem;
-    /* background: linear-gradient(rgb(54, 54, 168), rgb(2, 2, 53)); */
     color: white;
 
     padding: 3em;
