@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    perspective: 10px;
+}
+
+.background{
+    height: 100%;
+    width: 100%;
+}
+
