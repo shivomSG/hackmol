@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login as lg
-from .models import patient
+from .models import patient_data
 
 # Create your views here.
 
@@ -41,14 +41,17 @@ def login(request):
 
     return render(request,'login.html')
 
+def beds(request):
+    return render(request, 'beds.html')
 def appointments(request):
         if request.method == 'POST':
-          name = request.POST['name']
-          age = request.POST['age']
-          gender = request.POST['gender']
-          doctor = request.POST['doctor']
-          date = request.POST['time']
-          pat_data = patient(name=name, age=age,  gender=gender, doctor=doctor, date=date)
+          name = request.POST.get('name')
+          age = request.POST.get('age')
+          gender = request.POST.get('gender')
+          doctor = request.POST.get('doctor')
+          date = request.POST.get('time')
+          pat_data = patient_data(name=name, age=age,  gender=gender, doctor=doctor, date=date)
           pat_data.save()
+          print(name, age, doctor, date, gender)
 
         return render(request,'appointments.html')

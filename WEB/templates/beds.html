@@ -11,9 +11,11 @@
 
 	</head>
 	<body>
+
 		<!-- Register Form -->
 		<div class="form-wrapper"> <!-- Form-wrapper only for positioning -->
 			<form action="#non" method="post" class="fcorn-register container">
+                {% csrf_token %}
 				<p class="register-info">Note: All fields are required.</p>
 				<div class="row">
 					<p class="col-md-6"><input type="text" placeholder="First Name" required></p>

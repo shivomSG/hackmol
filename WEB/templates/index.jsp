@@ -20,5 +20,7 @@
     <br>hi this is our website</h1></marquee></center>
 
 <center><a href="{% url 'appointments' %}">Appointment</a></center>
+<br><br><br>
+<center><a href="{% url 'beds' %}">Beds Booking</a></center>
 </body>
 </html>
