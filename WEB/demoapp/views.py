@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login as lg
 # Create your views here.
 
 def index(request):
@@ -29,7 +29,7 @@ def login(request):
         pass1 = request.POST.get('pass')
         user = authenticate(request, username=username, password=pass1)
         if user is not None:
-            login(request, user)
+            lg(request, user)
             return redirect('index')
         else:
             return render(request,'login.html')
