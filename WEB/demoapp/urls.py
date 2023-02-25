@@ -6,6 +6,5 @@ urlpatterns = [
  #   path('home/', views.home, name='home-page'),
     path('login/', views.login, name='login'),
     path('signup/', views.signup, name='signup'),
-    path('appoint/',views.appoint, name='appoint'),
-    #path('apt_data/', views.apt_data, name='apt_data')
+    path('appointments/', views.appointments, name='appointments')
 ]
