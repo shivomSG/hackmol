@@ -9,10 +9,13 @@
     overflow-x: hidden; 
     overflow-y: auto; 
     perspective: 10px;
+    background-image: url("beds.jpg");
+    background-size: cover;
 }
 
-.background{
-    height: 100%;
-    width: 100%;
-}
 
+
+.navbar{
+    display: flex;
+    background-color: aqua;
+}
