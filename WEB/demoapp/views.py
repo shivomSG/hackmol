@@ -7,6 +7,9 @@ from .models import patient
 
 def index(request):
     return render(request, 'index.html')
+def index1(request):
+    return render(request, 'index.jsp')
+
 def signup(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -32,7 +35,7 @@ def login(request):
         user = authenticate(request, username=username, password=pass1)
         if user is not None:
             lg(request, user)
-            return redirect('index')
+            return redirect('index1')
         else:
             return render(request,'login.html')
 

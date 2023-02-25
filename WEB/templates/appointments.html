@@ -6,23 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
     <title>Document</title>
+
+    <style>
+
+        *{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        {% load static %}
+        .wrapper{
+    background-image: url("static/images/hoapital.jpg");
+    }
+body{
+
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: white;
+    transition: 250ms ease-in;
+}
+
+.navbar{
+    background-color: rgba(200, 200, 200, 0.5);
+    font-family: sans-serif;
+}
+
+.list{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.list>li{
+    padding: 0.2em;
+    font-size: 2em;
+}
+
+.conatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.form{
+    /* background-image: url("static/images/hoapital.jpg");
+    background-size: cover; */
+
+    /* height: 100vh; */
+    margin:0 3rem;
+    /* background: linear-gradient(rgb(54, 54, 168), rgb(2, 2, 53)); */
+    color: white;
+
+    padding: 3em;
+    font-size: 2rem;
+
+    filter: blur(50%);
+}
+
+.pt_name{
+    background-color: rgba(200, 200, 200, 0.3);
+    border: none;
+    padding: 0.5em;
+    border-radius: 10px;
+    margin: 0.1em 1em;
+
+    font-size: 0.75em;
+}
+
+.pt_age{
+    background-color: rgba(200, 200, 200, 0.3);
+    border: none;
+    padding: 0.5em;
+    border-radius: 10px;
+    margin: 0.1em 1em;
+
+    font-size: 0.75em;
+}
+
+.pt_gender{
+    background-color: rgba(200, 200, 200, 0.3);
+    border: none;
+    padding: 0.5em;
+    border-radius: 10px;
+    margin: 0.1em 1em;
+
+    font-size: 0.75em;
+}
+
+.date{
+    background-color: rgba(200, 200, 200, 0.3);
+    border: none;
+    padding: 0.5em;
+    border-radius: 10px;
+    margin: 0.1em 1em;
+
+    font-size: 0.75em;
+}
+    </style>
 </head>
 <body>
-<<<<<<< HEAD
     <form action="" method="post">
         {% csrf_token %}
-        <div class="navbar">
-            <ul class="list">
-                <li>home</li>
-                <li>blah</li>
-                <li>blah</li>
-            </ul>
-        </div>
-=======
 
     <div class="navbar">
         <ul class="list">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{% url 'index1' %}">Home</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">About Us</a></li>
         </ul>
@@ -31,7 +128,6 @@
     <div class="container">
             
     <form action="" class="form">
->>>>>>> cd59e392d0463291f3e634dab74b366a300047d7
 
         <label for="name">Name</label>
         <input type="text" placeholder="name" name="name" id="name" >
@@ -70,9 +166,6 @@
         <button type="submit">sUBMIT</button>
 
     </form>
-<<<<<<< HEAD
-
-=======
     </div>
 
     <!-- <form action="" class="form">
@@ -108,6 +201,5 @@
             <input type="datetime-local" class="date">
 
     </form> -->
->>>>>>> cd59e392d0463291f3e634dab74b366a300047d7
 </body>
 </html>

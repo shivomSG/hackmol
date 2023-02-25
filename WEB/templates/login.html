@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <!--Stylesheet-->
     <style media="screen">
+        {% load static %}
       *,
 *:before,
 *:after{
@@ -16,11 +17,19 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    /* background-color: #080710; */
-    background-image: url("./images/images/sthetescope.jpg");
+{% load static %}
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+    background-image: url("static/images/beds.jpg");
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 /* .background{
     width: 430px;
     height: 520px;
