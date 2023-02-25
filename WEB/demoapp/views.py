@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login as lg
 # Create your views here.
 
-def home(request):
-    return render(request, 'home.html')
+def index(request):
+    return render(request, 'index.jsp')
 def signup(request):
     if request.method == 'POST':
         username = request.POST.get('username')
