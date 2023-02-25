@@ -22,6 +22,7 @@ a:hover{
 .navbar{
     background-color: rgba(200, 200, 200, 0.5);
     font-family: sans-serif;
+    padding: 1em;
 }
 
 .list{
