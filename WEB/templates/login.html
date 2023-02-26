@@ -17,7 +17,7 @@
 }
 body{
 
-    background-image: url("/WEB/demoapp/static/images/sthetescope.jpg");
+    background-image: url("./images/sthetescope.jpg");
     background-size: cover;
 }
 
@@ -106,10 +106,14 @@ button{
     width: 10%;
     transform: translateX(1em) translateY(1em);
 }
+
+a{
+    text-decoration: none;
+}
     </style>
 </head>
 <body>
-<button class="btn"> <a href="{% url 'index' %}" >Home</a> </button>
+<button class="btn"> <a href="index.html" >Home</a> </button>
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
@@ -125,7 +129,7 @@ button{
         <input type="password" placeholder="Password" id="password" name="pass">
 
         <button type="submit">Log In</button>
-        <a href="{% url 'signup' %}" >Create a account</a>
+        <a href="signup.html" >Create a account</a>
     </form>
 </body>
 </html>

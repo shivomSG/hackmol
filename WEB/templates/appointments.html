@@ -19,7 +19,7 @@
 
     <div class="container">
 
-    <form action="" method="post">
+    <form action="" method="post" class="form">
         {% csrf_token %}
 
         <label for="name">Name</label>
@@ -44,10 +44,10 @@
 
         <label for="apt">Book an appointment with Dr.</label>
         <select placeholder="doctor" name="doctor" id="doctor">
-                <option value="">asd</option>
-                <option value="">adg</option>
-                <option value="">fadsf</option>
-                <option value="">afas</option>
+                <option value="">Chinmay</option>
+                <option value="">Shivam</option>
+                <option value="">Aman</option>
+                <option value="">Ayush</option>
             </select>
 
             <br><br>
@@ -56,7 +56,7 @@
         <input type="number" placeholder="time" name="time" id="time" >
 <BR>
         <BR>
-        <button type="submit">SUBMIT</button>
+        <button type="submit" id="btn"> <a href="payment.html">SUBMIT</a></button>
 
     </form>
     </div>

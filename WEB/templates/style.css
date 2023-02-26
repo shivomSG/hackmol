@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("./images/hospital.webp");
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
+.container{
+    margin: 20% 0 20% 0;
+    display: flex;
+    justify-content: center;
+}
+
+.service{
+    margin: 0 1em;
+    height: 10em;
+    width: 10em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+}
+
+.service:hover{
+    filter: brightness(50%);
+    scale: 103%;
+
+    color:white;
+    transition: all 200ms;
+}
+
+#s1{
+    background-image: url("./images/pexels-shvets-production-7176026.jpg");
+    background-size: cover;
+}
+
+#s2{
+    background-image: url("./images/bedd.jpg");
+    background-size: cover;
+}
+
+#s3{
+    background-image: url("./images/pexels-cedric-fauntleroy-4269362.jpg");
+    background-size: cover;
+}
