@@ -6,16 +6,17 @@
 		<link rel="stylesheet" href="icons/styles.css">
 		<link rel="stylesheet" href="css/bootstrap-custom.css">
 		<link rel="stylesheet" href="css/registration-form.css">
+		<link rel="stylesheet" href="beds.css">
 
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600' rel='stylesheet' type='text/css'>
 
 	</head>
 	<body>
 
-		<!-- Register Form -->
-		<div class="form-wrapper"> <!-- Form-wrapper only for positioning -->
+		<div class="form-wrapper">
 			<form action="#non" method="post" class="fcorn-register container">
                 {% csrf_token %}
+				<h1>Book a bed</h1>
 				<p class="register-info">Note: All fields are required.</p>
 				<div class="row">
 					<p class="col-md-6"><input type="text" placeholder="First Name" required></p>
